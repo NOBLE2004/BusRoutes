@@ -1,0 +1,17 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="row_padding_vertical">10dp</dimen>
+    <dimen name="text_size_bus_name">23sp</dimen>
+    <dimen name="text_size_stop">18sp</dimen>
+    <dimen name="bus_image_width">80dp</dimen>
+    <dimen name="bus_image_height">80dp</dimen>
+    <dimen name="toolbar_header">20sp</dimen>
+    <dimen name="text_size_details">15sp</dimen>
+    <dimen name="accessibility_image_width">40dp</dimen>
+    <dimen name="accessibility_image_height">40dp</dimen>
+    <dimen name="line_height">40dp</dimen>
+    <dimen name="line_width">2dp</dimen>
+    <dimen name="stops_list_margin">32dp</dimen>
+</resources>
