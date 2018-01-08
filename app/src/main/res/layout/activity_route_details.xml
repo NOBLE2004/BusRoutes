@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
 
-    <include layout="@layout/item_bus_list" />
+    <include layout="@layout/layout_bus_details" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerViewStops"
