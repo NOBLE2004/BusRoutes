@@ -42,19 +42,20 @@ public class RouteDetailsActivity extends AppCompatActivity {
         imageViewAccessibility = (ImageView) findViewById(R.id.imageViewAccessibility);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewStops);
 
+       //Getting route details
 
-        Intent i = getIntent();
-        RoutesItem dene = (RoutesItem) i.getSerializableExtra("values");
-        textViewName.setText(dene.getName());
-        textViewDetails.setText(dene.getDescription());
-        Picasso.with(this).load(dene.getImage()).error(R.mipmap.ic_launcher).into(imageViewBus);
+        Intent intent = getIntent();
+        RoutesItem routesItem = (RoutesItem) intent.getSerializableExtra("values");
 
-        if (dene.getAccessible()) {
+        //Setting routs details
+
+        textViewName.setText(routesItem.getName());
+        textViewDetails.setText(routesItem.getDescription());
+        Picasso.with(this).load(routesItem.getImage()).error(R.mipmap.ic_launcher).into(imageViewBus);
+        if (routesItem.getAccessible()) {
             imageViewAccessibility.setVisibility(View.VISIBLE);
         }
-
-
-        mAdapter = new BusStopsAdapter(dene.getStops());
+        mAdapter = new BusStopsAdapter(routesItem.getStops());
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
